@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+body {
+	padding-top: 20px;
+}
+
+/*
+ * item-list
+ */
+.item-list .item {
+	min-height: 80px;
+	margin-bottom: 30px;
+	clear: both;
+	list-style: none;
+}
+.item-list .item:last-child {
+	margin-bottom: 0;
+}
+.item-list .item img {
+	width: 80px;
+	float: left;
+	vertical-align: top;
+}
+.item-list .item .info-wrap {
+	padding-left:  100px;
+}
+.item-list .item h3 {
+	display : inline;
+}
+.item-list .item .snippet {
+	width: 400px;
+}
+
+/*
+ * item-detail
+ */
+.item-detail .phone-images {
+	background-color: white;
+	width: 450px;
+	height: 450px;
+	overflow: hidden;
+	position: relative;
+	float: left;
+}
+.item-detail img.phone {
+	float: left;
+	margin-right: 3em;
+	margin-bottom: 2em;
+	background-color: white;
+	padding: 2em;
+	height: 400px;
+	width: 400px;
+	display: none;
+}
+.item-detail img.active {
+	display: block;
+}
+.item-detail ul.phone-thumbs {
+	margin: 0;
+	list-style: none;
+}
+.item-detail ul.phone-thumbs li {
+	border: 1px solid black;
+	display: inline-block;
+	margin: 1em;
+	background-color: white;
+}
+.item-detail ul.phone-thumbs img {
+	height: 100px;
+	width: 100px;
+	padding: 1em;
+}
+.item-detail ul.phone-thumbs img:hover {
+	cursor: pointer;
+}
+.item-detail ul.specs {
+	clear: both;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.item-detail ul.specs > li{
+	display: inline-block;
+	width: 200px;
+	vertical-align: top;
+}
+.item-detail ul.specs > li > span{
+	font-weight: bold;
+	font-size: 1.2em;
+}
+.item-detail ul.specs dt {
+	font-weight: bold;
+}
+.item-detail h1 {
+	border-bottom: 1px solid gray;
+}

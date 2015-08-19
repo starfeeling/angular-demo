@@ -1,0 +1,9 @@
+<ul class="item-list">
+	<li ng-repeat="item in ilCtrl.list" class="item">
+		<img src="/{{item.imageUrl}}" />
+		<div class="info-wrap">
+			<h3><a href="/{{item.id}}">{{item.name}}</a></h3>
+			<p class="snippet">{{item.snippet}}</p>
+		</div>
+	</li>
+</ul>

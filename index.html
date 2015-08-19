@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html  data-ng-app="app">
+	<head>
+		<meta charset="utf-8" />
+		<title>angular-demo</title>
+		 
+		<link rel="stylesheet" href="/css/angular-demo.css">
+		
+		<!--[if lte IE 8]>
+			<script src="/js/vendors/json3.min.js"></script>
+			<script src="/js/vendors/html5shiv.js"></script>
+			<script src="/js/vendors/ie8.fix.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<header class="global-header"></header>
+
+		<div class="global-container">
+			<div data-ng-view="true"></div>
+		</div>
+
+		<footer class="global-footer"></footer>
+
+		<!--  vendors -->
+		<script src="/js/vendors/angular.1.4.min.js"></script>
+		<script src="/js/vendors/angular-buildModule.js"></script>
+		<script src="/js/vendors/angular-resource.min.js"></script>
+		<script src="/js/vendors/angular-route.min.js"></script>
+		<script src="/js/vendors/jquery-1.10.2.min.js"></script>
+		<script src="/js/vendors/jquery.browser.js"></script>
+
+		<!--  module -->
+		<script src="/js/module.js"></script>
+		
+		<!--  components -->
+		<script src="/js/components/autoComplete/autoComplete.controller.js"></script>
+		<script src="/js/components/autoComplete/autoComplete.directive.js"></script>
+		<script src="/js/components/autoComplete/autoComplete.service.js"></script>
+
+		<!--  configs -->
+		<script src="/js/configs/properties.local.js"></script>
+
+		<!--  interceptors -->
+		<script src="/js/interceptors/http.js"></script>
+		
+		<!--  pages -->
+		<script src="/js/pages/itemList/itemList.controller.js"></script>
+		<script src="/js/pages/itemList/itemList.directive.js"></script>
+		<script src="/js/pages/itemList/itemList.service.js"></script>
+		<script src="/js/pages/itemDetail/itemDetail.controller.js"></script>
+		<script src="/js/pages/itemDetail/itemDetail.directive.js"></script>
+		<script src="/js/pages/itemDetail/itemDetail.service.js"></script>
+		
+		<!--  filters  -->
+		<script src="/js/utils/htmlTag.filter.js"></script>
+		<script src="/js/utils/dateTime.formatter.js"></script>
+
+		<!--  app -->
+		<script src="/js/app/route.js"></script>
+		<script src="/js/app/configure.js"></script>
+		<script src="/js/app/run.js"></script>	
+	</body>
+</html>

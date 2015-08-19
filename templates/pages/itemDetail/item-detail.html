@@ -1,0 +1,116 @@
+<div class="item-detail" data-item-detail-directive="true">
+	<div class="phone-images">
+		<img class="phone" ng-src="/{{img}}" ng-repeat="img in idCtrl.item.images" ng-class="{active: idCtrl.mainImageUrl==img}">
+	</div>
+	<h1>{{idCtrl.item.name}}</h1>
+	<div align="right">
+		<a href="/"><=back</a>
+	</div>
+	<p>{{idCtrl.item.description}}</p>
+	<ul class="phone-thumbs">
+		<li ng-repeat="img in idCtrl.item.images">
+			<img ng-src="/{{img}}" ng-click="setImage(img)">
+		</li>
+	</ul>
+	<ul class="specs">
+		<li>
+			<span>Availability and Networks</span>
+			<dl>
+				<dt>Availability</dt>
+				<dd ng-repeat="availability in idCtrl.item.availability">{{availability}}</dd>
+			</dl>
+		</li>
+		<li>
+			<span>Battery</span>
+			<dl>
+				<dt>Type</dt>
+				<dd>{{idCtrl.item.battery.type}}</dd>
+				<dt>Talk Time</dt>
+				<dd>{{idCtrl.item.battery.talkTime}}</dd>
+				<dt>Standby time (max)</dt>
+				<dd>{{idCtrl.item.battery.standbyTime}}</dd>
+			</dl>
+		</li>
+		<li>
+			<span>Storage and Memory</span>
+			<dl>
+				<dt>RAM</dt>
+				<dd>{{idCtrl.item.storage.ram}}</dd>
+				<dt>Internal Storage</dt>
+				<dd>{{idCtrl.item.storage.flash}}</dd>
+			</dl>
+		</li>
+		<li>
+			<span>Connectivity</span>
+			<dl>
+				<dt>Network Support</dt>
+				<dd>{{idCtrl.item.connectivity.cell}}</dd>
+				<dt>WiFi</dt>
+				<dd>{{idCtrl.item.connectivity.wifi}}</dd>
+				<dt>Bluetooth</dt>
+				<dd>{{idCtrl.item.connectivity.bluetooth}}</dd>
+				<dt>Infrared</dt>
+				<dd>{{idCtrl.item.connectivity.infrared | checkmark}}</dd>
+				<dt>GPS</dt>
+				<dd>{{idCtrl.item.connectivity.gps | checkmark}}</dd>
+			</dl>
+		</li>
+		<li>
+			<span>Android</span>
+			<dl>
+				<dt>OS Version</dt>
+				<dd>{{idCtrl.item.android.os}}</dd>
+				<dt>UI</dt>
+				<dd>{{idCtrl.item.android.ui}}</dd>
+			</dl>
+		</li>
+		<li>
+			<span>Size and Weight</span>
+			<dl>
+				<dt>Dimensions</dt>
+				<dd ng-repeat="dim in idCtrl.item.sizeAndWeight.dimensions">{{dim}}</dd>
+				<dt>Weight</dt>
+				<dd>{{idCtrl.item.sizeAndWeight.weight}}</dd>
+			</dl>
+		</li>
+		<li>
+			<span>Display</span>
+			<dl>
+				<dt>Screen size</dt>
+				<dd>{{idCtrl.item.display.screenSize}}</dd>
+				<dt>Screen resolution</dt>
+				<dd>{{idCtrl.item.display.screenResolution}}</dd>
+				<dt>Touch screen</dt>
+				<dd>{{idCtrl.item.display.touchScreen | checkmark}}</dd>
+			</dl>
+		</li>
+		<li>
+			<span>Hardware</span>
+			<dl>
+				<dt>CPU</dt>
+				<dd>{{idCtrl.item.hardware.cpu}}</dd>
+				<dt>USB</dt>
+				<dd>{{idCtrl.item.hardware.usb}}</dd>
+				<dt>Audio / headphone jack</dt>
+				<dd>{{idCtrl.item.hardware.audioJack}}</dd>
+				<dt>FM Radio</dt>
+				<dd>{{idCtrl.item.hardware.fmRadio | checkmark}}</dd>
+				<dt>Accelerometer</dt>
+				<dd>{{idCtrl.item.hardware.accelerometer | checkmark}}</dd>
+			</dl>
+		</li>
+		<li>
+			<span>Camera</span>
+			<dl>
+				<dt>Primary</dt>
+				<dd>{{idCtrl.item.camera.primary}}</dd>
+				<dt>Features</dt>
+				<dd>{{idCtrl.item.camera.features.join(', ')}}</dd>
+			</dl>
+		</li>
+		<li>
+			<span>Additional Features</span>
+			<dd>{{idCtrl.item.additionalFeatures}}</dd>
+		</li>
+	</ul>
+</div>
